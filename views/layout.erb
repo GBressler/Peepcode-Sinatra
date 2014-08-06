@@ -7,6 +7,13 @@
  </head>
 <body>
 
+	<% if authorized? %>
+	<div id="nav">
+		<a href="/list">List</a>|<a href="/new">New</a>
+	</div>
+
+<% end %>
+
   <%= yield %> 
 <div id="debug">
 	<p>The Time is <%= Time.now.strftime("%I :%M: %S %p") %>. </p>
